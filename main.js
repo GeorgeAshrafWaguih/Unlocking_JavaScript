@@ -155,3 +155,56 @@ console.log(false-true);
 console.log(+false-+true);
 console.log(x+y+z);
 console.log(+x+y+z);
+
+/**
+ * Numbers
+ */
+
+console.log(1000000);
+console.log(1_000_000);
+console.log(1e6);
+console.log(10 ** 6);
+console.log(1000000.00);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MAX_VALUE);
+console.log(Number.MAX_VALUE + 20000000);
+
+/**
+ * Number Methods
+ */
+
+console.log((100).toString())
+console.log(100..toString())
+
+console.log(100.55555.toFixed(2))
+console.log(100.55355.toFixed(2))
+
+console.log(parseInt("100"))
+console.log(parseInt("100.500 Geo"))  // 100
+console.log(parseFloat("100.501 Geo")) //100.501
+
+console.log(Number.isInteger("100")) //False
+console.log(Number.isInteger(100.500)) //False
+console.log(Number.isInteger(100))  //True
+
+console.log(Number.isNaN(100.500)) // False
+console.log(Number.isNaN("Geo")) // False
+
+/**
+ * Math Object
+ */
+
+console.log(Math.round(99.2)) //99
+console.log(Math.round(99.5)) //100
+
+console.log(Math.ceil(99.2))  //100
+console.log(Math.floor(99.9)) //99
+
+console.log(Math.min(10, 20, 100, -100, 90)); // -100
+console.log(Math.max(10, 20, 100, -100, 90)); // 100
+
+console.log(Math.pow(2, 4)) // 2**4 = 16
+
+console.log(Math.random()) // generates random number
+
+console.log(Math.trunc(99.5))
