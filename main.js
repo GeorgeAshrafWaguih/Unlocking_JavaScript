@@ -207,4 +207,55 @@ console.log(Math.pow(2, 4)) // 2**4 = 16
 
 console.log(Math.random()) // generates random number
 
-console.log(Math.trunc(99.5))
+console.log(Math.trunc(99.5)) // 99 - returns the integer part
+
+/**
+ * String Methods
+ */
+
+let theName = "George";
+let theList = [1, 2, 3, 4, 5];
+
+console.log(theName);  // George
+console.log(theName.charAt(1)); // e
+console.log(theName.charAt(6)); // undefined
+console.log(theName[1]); // e
+console.log(theName.length) // 6
+
+let theName1 = "  George  "
+
+console.log(theName1.trim())  // George - removes spacing in field
+console.log(theName.toUpperCase())  // GEORGE
+console.log(theName.toLowerCase())  // george
+
+console.log(theName1.trim().charAt(3).toUpperCase())  // R - chaining of methods 
+
+let aa = "Geo Web School";
+
+console.log(aa.indexOf("Web")); // 7
+console.log(aa.indexOf("Web", 8)); // -1
+console.log(aa.indexOf("o")) // 2
+console.log(aa.lastIndexOf("o")); // 10
+console.log(aa.slice(0,9)) // Geo Web S
+console.log(aa.slice(-5)) // chool
+console.log(aa.slice(-5, -3)) // ch
+console.log(aa.repeat(4))
+console.log(aa.split()) // ['Geo Web School']
+console.log(aa.split(" ")) //  ['Geo', 'Web', 'School']
+console.log(aa.split(" ",2)) //  ['Geo', 'Web'] - adding a limit to the array 
+console.log(aa.substring(4)) //  Web School
+console.log(aa.substring(4,7)) //  Web 
+console.log(aa.substring(-10, 7)) //  Geo Web- any number less than zero is considered zero
+console.log(aa.length) // 14
+console.log(aa.substring(aa.length-1)) // l - last letter of the string
+console.log(aa.substr(0,3)) // Geo
+console.log(aa.substr(-5, 2)) // ch
+console.log(aa.substr(-6)) // School
+
+console.log(aa.includes("Web")) // True
+console.log(aa.includes("Web", 6)) // false , starts from index 6
+console.log(aa.startsWith("G")) // True
+console.log(aa.startsWith("G",3)) // false , starts from index 3
+console.log(aa.endsWith("o")) // false
+console.log(aa.endsWith("o", 3)) // true , use lenght and not index for size
+console.log(aa.endsWith("eo", 3)) // true , use lenght and not index for size
