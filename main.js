@@ -368,3 +368,116 @@ switch(day){
     default:
         console.log("Unknown day")
 }
+
+/**
+ * Arrays
+ */
+
+let myFriends = ["Ahmed", "Mayar", "Sayed",["Marawan", "Ali"]];
+console.log(`Hello ${myFriends[0]}`)
+console.log(`Hello ${myFriends[2]}`)
+console.log(`Hello ${myFriends[1][2]}`) // can access char in element
+console.log(`Hello ${myFriends[3]}`)  // Hello Marawan,Ali
+console.log(`Hello ${myFriends[3][1]}`) // Hello Ali
+console.log(`Hello ${myFriends[3][1][2]}`) // Hello i
+
+console.log(myFriends) // ['Ahmed', 'Mayar', 'Sayed', Array(2)]
+myFriends[1]="Mahmoud"
+console.log(myFriends) // ['Ahmed', 'Mahmoud', 'Sayed', Array(2)]
+myFriends[3]="Sameh"
+console.log(myFriends) // ['Ahmed', 'Mahmoud', 'Sayed', 'Sameh']
+myFriends[3]=["Sameh","Amir"]
+console.log(myFriends) // ['Ahmed', 'Mahmoud', 'Sayed', Array(2)]
+console.log(typeof myFriends) // object
+console.log(Array.isArray(myFriends)) // true
+
+/**
+ * Array Methods
+ */
+
+let myFriends1=["Ahmed", "Mohamed", "Sayed", "Alaa"]
+console.log(myFriends.length) // 4
+myFriends1[3]="Gamal"
+console.log(myFriends1) // ['Ahmed', 'Mohamed', 'Sayed', 'Gamal']
+myFriends1[6]="Hany"
+console.log(myFriends1) // ['Ahmed', 'Mohamed', 'Sayed', 'Gamal', empty × 2, 'Hany']
+console.log(myFriends1.length) // 7
+myFriends1[myFriends1.length]="Ali" // to add element to array in a dynamic way
+console.log(myFriends1) // ['Ahmed', 'Mohamed', 'Sayed', 'Gamal', empty × 2, 'Hany', 'Ali']
+myFriends1[myFriends1.length]="Paige"
+console.log(myFriends1) // ['Ahmed', 'Mohamed', 'Sayed', 'Gamal', empty × 2, 'Hany', 'Ali', 'Paige']
+myFriends1[myFriends1.length-1]= "Heather" // to change last element in dynamic way
+console.log(myFriends1) //  ['Ahmed', 'Mohamed', 'Sayed', 'Gamal', empty × 2, 'Hany', 'Ali', 'Heather']
+myFriends1.length = 3
+console.log(myFriends1) // ['Ahmed', 'Mohamed', 'Sayed']
+
+// Add , remove from array 
+let myFriends2=["Heather","Paige","Lolita","Fernanda"]
+console.log(myFriends2);  // ['Heather', 'Paige', 'Lolita', 'Fernanda']
+myFriends2.unshift("Osama","Nabil") // unshift to add elements to the start of the array
+console.log(myFriends2); // ['Osama', 'Nabil', 'Heather', 'Paige', 'Lolita', 'Fernanda']
+myFriends2.push("Osama","Nabil") // Adds elements to the end of the array 
+console.log(myFriends2); // ['Osama', 'Nabil', 'Heather', 'Paige', 'Lolita', 'Fernanda', 'Osama', 'Nabil']
+let first = myFriends2.shift(); // removes first element and store it 
+console.log(myFriends2); //['Nabil', 'Heather', 'Paige', 'Lolita', 'Fernanda', 'Osama', 'Nabil']
+console.log(first) // Osama
+let last = myFriends2.pop() // removes last element and store it 
+console.log(myFriends2) //  ['Nabil', 'Heather', 'Paige', 'Lolita', 'Fernanda', 'Osama']
+console.log(last) // Nabil
+
+// Search array 
+let myFriends3 = ["Hailey","Bri","Negine","Alaa","Hailey"]
+console.log(myFriends3)
+console.log(myFriends3.indexOf("Hailey")) // 0
+console.log(myFriends3.indexOf("Hailey",2)) // 4 , giving the start of where to look in the array "2"
+console.log(myFriends3.lastIndexOf("Hailey")) // 4 , searching from the end of array 
+console.log(myFriends3.lastIndexOf("Hailey",-2)) // 0 , giving the start of where to look in the array "-2"
+console.log(myFriends3.includes("Hailey")) // true
+console.log(myFriends3.includes("Hailey",2)) // true
+
+if (myFriends3.indexOf("Hailey") === -1) // -1 means element is not found in array
+{
+    console.log("Not Found")
+} 
+if (myFriends3.indexOf("Ali") === -1)
+{
+    console.log("Not Found")
+} 
+
+// Sorting array 
+let myFriends4 = [10, "Sayed", "Mohamed", "90", 1000, 100, 20, "10", -20, -10]
+console.log(myFriends4) // 
+console.log(myFriends4.sort()) // [-10, -20, 10, '10', 100, 1000, 20, '90', 'Mohamed', 'Sayed']
+console.log(myFriends4.reverse()) // ['Sayed', 'Mohamed', '90', 20, 1000, 100, '10', 10, -20, -10]
+console.log(myFriends4.sort().reverse())  // chain function
+
+// Slicing array
+let myFriends5=["Ahmed","Sayed","Ali","Osama","Gamal","Ameer"]
+console.log(myFriends5)
+console.log(myFriends5.slice())
+console.log(myFriends5.slice(1)) //  ['Sayed', 'Ali', 'Osama', 'Gamal', 'Ameer']
+console.log(myFriends5.slice(1,3)) // ['Sayed', 'Ali'] 
+console.log(myFriends5.slice(-3)) // ['Osama', 'Gamal', 'Ameer']
+console.log(myFriends5.slice(1,-2)) // ['Sayed', 'Ali', 'Osama']
+console.log(myFriends5.slice(-4,-2)) // ['Ali', 'Osama']
+
+myFriends5.splice(0, 0, "Sameer","Samara") // splice (start index, number of elements to remove , elements to be added)
+console.log(myFriends5)
+
+// Joining arrays
+let myFriends6 = ["Ahmed","Sayed","Ali","Osama","Gamal","Ameer"]
+let myNewFriends = ["Samar","Sameh"]
+let schoolFriends = ["Haytham","Shady"]
+let allFriends = myFriends6.concat(myNewFriends,schoolFriends,"Gameel")
+
+console.log(allFriends) // ['Ahmed', 'Sayed', 'Ali', 'Osama', 'Gamal', 'Ameer', 'Samar', 'Sameh', 'Haytham', 'Shady', "Gameel"]
+
+console.log(allFriends.join()) // Ahmed,Sayed,Ali,Osama,Gamal,Ameer,Samar,Sameh,Haytham,Shady,Gameel
+console.log(allFriends.join("")) // AhmedSayedAliOsamaGamalAmeerSamarSamehHaythamShadyGameel
+console.log(allFriends.join(" | ")) // Ahmed | Sayed | Ali | Osama | Gamal | Ameer | Samar | Sameh | Haytham | Shady | Gameel
+console.log(allFriends.join(" | ").toUpperCase()) // AHMED | SAYED | ALI | OSAMA | GAMAL | AMEER | SAMAR | SAMEH | HAYTHAM | SHADY | GAMEEL
+
+/**
+ * Loop
+ */
+
