@@ -259,3 +259,112 @@ console.log(aa.startsWith("G",3)) // false , starts from index 3
 console.log(aa.endsWith("o")) // false
 console.log(aa.endsWith("o", 3)) // true , use lenght and not index for size
 console.log(aa.endsWith("eo", 3)) // true , use lenght and not index for size
+
+/**
+ * Comparison operators
+ */
+
+console.log(10 == "10") // true
+console.log(10 != "10") // false
+console.log(10 === "10") // false ,  === means identical match
+console.log(10 !== "10") // true
+
+/**
+ * logical operators
+ */
+
+console.log(true)  // true
+console.log(!true)  // false
+console.log(!(10 == "10"))  // false
+console.log(10 == "10" && 10 > 8 && 10 >= 10) // true
+console.log(10 == "10" || 10 > 80 || 10 >= 50) // true
+
+/**
+ * If conditions
+ *  Control flow
+ */
+
+let price = 100 
+let discount = false
+let discountAmount = 30
+let country = "Egypt"
+let student = true
+
+if(discount === true) {
+    price -= discountAmount // price = price - discountAmount
+}else if(country === "Egypt"){
+    price -= discountAmount + 10 // price = price - (discountAmount + 10)
+}else{
+    price -= 10
+}
+console.log(price)
+
+/**
+ * Nested If
+ */
+
+if(discount === true) {
+    price -= discountAmount; // price = price - discountAmount
+}else if(country === "Egypt"){
+    if (student === true){
+    price -= discountAmount + 30;
+    }
+}   else{
+    price -= 10;
+}
+console.log(price)
+
+/**
+ * COnditional Ternary operator
+ */
+
+let theName2 = "Mona";
+let theGender = "Female";
+let theAge = 30;
+
+if (theGender === "Male"){
+    console.log("Mr");
+}else {
+    console.log("Mrs");
+}
+
+theGender === "Male" ? console.log("Mr") : console.log("Mrs");
+let result = theGender === "Male" ? "Mr" : "Mrs";
+document.write(result)
+document.write(theGender === "Male" ? "Mr" : "Mrs")
+console.log(`Hello ${theGender === "Male" ? "Mr" : "Mrs"} ${theName2}`)
+
+theAge < 20 
+? console.log(20) 
+: theAge > 20 && theAge < 60 
+? console.log("20 tp 60") 
+: theAge > 60 
+? console.log("larger than 60") 
+: console.log("unknown");
+
+/**
+ * Nullish Coalescing Operator
+ */
+
+let price1 = null; 
+console.log(`The price is ${[price1 || 200]}`) // price = 200 if it is null or undefined or 0 
+console.log(`The price is ${[price1 ?? 200]}`) // price = 200 if it is null or undefined 
+
+/**
+ * Switch Statement
+ */
+
+let day = 5;
+switch(day){
+    case 0:
+        console.log("Saturday");
+        break;
+    case 1:
+        console.log("Sunday");
+        break;
+    case 2:
+        console.log("Monday");
+        break;
+    default:
+        console.log("Unknown day")
+}
