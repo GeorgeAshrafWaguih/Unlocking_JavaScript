@@ -480,4 +480,163 @@ console.log(allFriends.join(" | ").toUpperCase()) // AHMED | SAYED | ALI | OSAMA
 /**
  * Loop
  */
+//for loop
 
+for (let i =0; i < 10; i++) {
+    console.log(`Employee ${i+1}`)
+}
+
+// Loop on sequence
+
+let myFriends7 = [1, 2, "Osama","Ahmed","Sayed","Ali","Amira"]
+
+let onlyNames = []
+
+for (let i = 0; i<myFriends7.length ; i++) {
+    console.log(myFriends7[i])
+} // print the whole list item by item 
+
+for(let i = 0; i<myFriends7.length ; i++) {
+if (typeof myFriends7[i] === 'string') {
+    onlyNames.push(myFriends7[i]) // add strings to another array 
+    console.log(myFriends7[i])
+}
+} // print only the strings and exclude the numbers
+console.log(onlyNames)
+
+// Nested Loop
+let products = ["Keyboard","Mouse","Pen","Pad","Monitor"]
+let colors = ["Red","Green","Black"]
+let models = [2020,2021]
+for(let i = 0; i < products.length; i++){
+    console.log("#".repeat(15))
+    console.log(`# ${products[i]}`)
+    console.log("#".repeat(15))
+    console.log("Colors:")
+    for(let j = 0;j<colors.length;j++){
+        console.log(`- ${colors[j]}`)
+    }
+    console.log("Models:")
+    for (let k=0;k<models.length;k++){
+        console.log(`- ${models[k]}`)
+    }
+}
+
+// Loop Control  - Break , Continue, Label
+
+let products1 = ["Keyboard","Mouse","Pen","Pad","Monitor"]
+let colors1 = ["Red","Green","Black"]
+
+// Break
+for (let i=0;i<products1.length;i++){
+    if(products1[i]==="Pen"){
+        break
+    }                                   // break - ends the loop immediately
+    console.log(products1[i])
+}
+
+// Continue
+for (let i=0;i<products1.length;i++){
+    if(typeof products1[i]==="number"){
+        continue
+    }                                   // continue - skips the iteration and go to the next one
+    console.log(products1[i])
+}
+
+// label
+
+mainloop : for (let i=0;i<products1.length;i++){
+    
+    console.log(products1[i])
+    nestedloop: for(let j=0;j<colors1.length;j++){
+        console.log(`- ${colors1[j]}`)
+        if(colors1[j]=="Green"){
+            break mainloop
+        }
+    }
+}
+
+// Advanced loop
+let products2=["Keyboard","Mouse","Pen","Pad","Monitor","iPhone"]
+let i=0
+for(;;){
+    console.log(products2[i])
+    i++
+    if(i === products2.length) break
+}
+
+/**
+ * Products practice
+ */
+let products3=["Keyboard","Mouse","Pen","Pad","Monitor","iPhone"]
+let colors2=["Red","Green","Blue"]
+let showCount = 5
+document.write(`<h1>Show ${showCount} Products</h1>`)
+
+for (let i=0;i<showCount;i++){
+    document.write(`<div>`)
+    document.write(`<h3>[${i+1}] ${products3[i]}</h3>`)
+    for(let j=0;j<colors2.length;j++){
+        document.write(`<p>${colors2[j]}</p>`)
+    }
+    document.write(`<p>${colors2.join(" | ")}</p>`)
+    document.write(`</div>`)
+}
+
+/**
+ * Loop - While
+ */
+
+let products4=["Keyboard","Mouse","Pen","Pad","Monitor","iPhone"]
+let index =0
+
+while (index<products4.length) {
+    console.log(products4[index])
+    index++
+    
+}
+
+/**
+ * Do While
+ */
+let products5=["Keyboard","Mouse","Pen","Pad","Monitor","iPhone"]
+let i1 =0
+
+do {
+    console.log(i1)
+    i1++   
+} while(false)
+
+/**
+ * Function Intro
+ */
+
+function sayHello(name) {
+    console.log(`Hello ${name}`)
+}
+sayHello("Geo")
+sayHello("Fox")
+
+/**
+ * Advanced Function
+ */
+
+function sayHello1(userName, age){
+    if (age <20){
+        console.log(`App is not suitable for you, ${userName}`)
+    }else {
+        console.log(`Hello ${userName}! Your age is ${age}`)
+    }
+    
+}
+sayHello1("Geo",34)
+sayHello1("Sayed",40)
+sayHello1("Ali",18)
+
+function generateYears(start,end,exclude) {
+    for(let i=start;i<=end;i++){
+        if(i===exclude) continue
+        console.log(i)
+    }
+}
+generateYears(1988,1991,1989)
