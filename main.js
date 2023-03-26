@@ -1211,22 +1211,72 @@
 // let newObject = Object.assign({} , obj1, {prop5:5, prop6:6})
 // console.log(newObject)
 
-// DOM
+// // DOM
 
-let myIdElement = document.getElementById("my-div")
-let myTagElements = document.getElementsByTagName("p")
-let myClassElement = document.getElementsByClassName("my-span")
-let myQueryElement = document.querySelector(".my-span")
-let myQueryALLElements = document.querySelectorAll(".my-span")
-console.log(myIdElement)
-console.log(myTagElements[1])
-console.log(myClassElement)
-console.log(myQueryALLElements)
+// let myIdElement = document.getElementById("my-div")
+// let myTagElements = document.getElementsByTagName("p")
+// let myClassElement = document.getElementsByClassName("my-span")
+// let myQueryElement = document.querySelector(".my-span")
+// let myQueryALLElements = document.querySelectorAll(".my-span")
+// console.log(myIdElement)
+// console.log(myTagElements[1])
+// console.log(myClassElement)
+// console.log(myQueryALLElements)
 
-console.log(document.title)
-console.log(document.body)
-console.log(document.forms)
-console.log(document.forms[0].one.value)
-console.log(document.links)
-console.log(document.links[1])
-console.log(document.links[1].href)
+// console.log(document.title)
+// console.log(document.body)
+// console.log(document.forms)
+// console.log(document.forms[0].one.value)
+// console.log(document.links)
+// console.log(document.links[1])
+// console.log(document.links[1].href)
+
+// // Get/Set Element content/attribute
+
+// let myElement = document.querySelector(".js")
+
+// console.log(myElement.innerHTML)
+// console.log(myElement.textContent)
+
+// myElement.innerHTML = "Text From <span>Main.js</span> File"
+// myElement.textContent = "Text From <span>Main.js</span> File"
+
+// document.images[0].src="https://google.com"
+// document.images[0].alt="Alternate"
+// document.images[0].title="Picture"
+// document.images[0].id="pic"
+// document.images[0].className="img"
+
+// let myLink = document.querySelector(".link")
+// console.log(myLink.getAttribute("class"))
+// console.log(myLink.getAttribute("href"))
+
+// myLink.setAttribute("href","https://twitter.com")
+// console.log(myLink.getAttribute("href"))
+
+// // myLink.setAttribute("title","Twitter")
+
+// console.log(document.getElementsByTagName("p")[0].attributes)
+// console.log(document.getElementsByTagName("p")[0].attributes[0])
+
+// let myP = document.getElementsByTagName("p")[0]
+
+// if (myP.hasAttribute("data-src")) {
+//     if (myP.getAttribute("data-src")==="") {
+//         myP.removeAttribute("data-src")
+//     } else {
+//         myP.setAttribute("data-src","New Value")
+//     }
+// } else {
+//     console.log("Not Found")
+// }
+
+// if (myP.hasAttributes()) {
+//     console.log(`Has attributes`)
+// }
+
+// if (document.getElementsByTagName("div")[0].hasAttributes()) {
+//     console.log(`Div has attributes`)
+// }else {
+//     console.log(`Div has no attributes`)
+// }
